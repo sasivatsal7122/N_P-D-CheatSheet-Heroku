@@ -24,10 +24,10 @@ def main():
     if option:
         if option == 'NumPy':
             pass
-            #numpyscript.main()
+            numpyscript.main()
         else:
             pass
-            #pandasscript.main()
+            pandasscript.main()
             
 if __name__=='__main__':
     main()
