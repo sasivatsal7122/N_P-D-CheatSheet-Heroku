@@ -100,9 +100,13 @@ def cs_body():
     # Sort arr
     arr.sort(axis=0)
     # Sorts specific axis of arr
-    two_d_arr.flatten()
-    # Flatten 2D array two_d_arr to 1D''')
+    ''')
+
+    col2.subheader('Copying/Sorting/Reshaping-II')
+    col2.subheader(' ')
     col2.code('''
+    two_d_arr.flatten()
+    # Flatten 2D array two_d_arr to 1D
     arr.T
     # Transposes arr(Rows become Columns and Vise Versa)
     arr.reshape(3,4)
@@ -170,6 +174,72 @@ def cs_body():
     ''')
 
     # Scalar Math
+
+    col3.subheader('Scalar Math')
+    col3.subheader(' ')
+    col3.code('''
+    np.add(arr,1)
+    # Add 1 to each array element
+    np.subtract(arr,2)
+    # Substract 2 from each array element
+    np.multiply(arr,3)
+    # Multiply each array element by 3
+    np.divide(arr,4)
+    # Divide each array element by 4
+    np.power(arr,5)
+    # Raise each array element to the 5th power
+    ''')
+
+    # Vector Math
+
+    col3.subheader('Vector Math')
+    col3.subheader(' ')
+    col3.code('''
+    np.add(arr1,arr2)
+    # Elementwise add arr2 to arr1
+    np.subtract(arr1,arr2)
+    # Elementwise substract arr2 fromm arr1
+    np.multiply(arr1,arr2)
+    # Elementwise multiply arr1 by arr2
+    np.divide(arr1,arr2)
+    # Elementwise divide arr1 by arr2
+    np.power(arr1,arr2)
+    # Elementwise Raise arr1 raised to the power of arr2
+    np.array_equal(arr1,arr2)
+    # Returns TRUE if the arrays have the same elements and shape
+    np.sqrt(arr)
+    # Squareroot of each element on the array
+    np.sin(arr)
+    # Sine of each element in the array
+    np.log(arr)
+    # Natural log of each element in the array
+    np.abs(arr)
+    # Absolute values of each element in the array
+    np.ceil(arr)
+    # Round up to the nearest int
+    np.floor(arr)
+    # Round down to the nearest int
+    np.round(arr)
+    # Round to the nearest int
+    ''')
+    # Statistics
+
+    col3.subheader('Statistics')
+    col3.subheader(' ')
+    col3.code('''
+    np.mean(arr,axis=0)
+    # Returns mean along spesific axis
+    arr.sum()
+    # Reaturns sum of the arr
+    arr.min()
+    # Returns minimum value of arr
+    arr.max(axis=0)
+    # Returns maximum value of spesific axis
+    np.std(arr,axis=1)
+    # Returns the Standerd deviation of spesific axis
+    arr.corrcoef()
+    # Returns correlation coefficient of arrar
+    ''')
     
 
 
