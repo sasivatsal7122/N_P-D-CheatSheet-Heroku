@@ -6,6 +6,12 @@ import numpyscript
 import pandasscript
 
 
+st.set_page_config(
+     page_title='Numpy cheat sheet',
+     layout="wide",
+     initial_sidebar_state="expanded",
+)
+
 def main():
     st.title("Welcome to NumPy And Pandas CheatSheet")
     option = st.sidebar.radio("Select one of the Options:",('NumPy','Panads'))
