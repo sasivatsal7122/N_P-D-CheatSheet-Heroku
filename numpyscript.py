@@ -110,7 +110,35 @@ def cs_body():
     #Changes arr shape to 5x6 and fills new values with 0
     ''')
 
-    
+    # Adding/Removing Elements
+
+    col2.subheader('Adding/Removing Elements')
+    col2.code('''
+     np.append(arr,values)
+     # Appends values to end of arr
+     np.insert(arr,2,value)
+     # Insert values into arr before index 2
+     np.delete(arr,3,axis=0)
+     # Delete row on index 3 of arr
+     np.delete(arr,4,axis=1)
+     # Delete column on index 4 of the arr
+     ''')
+
+    # Combining/Splitting
+
+    col2.subheader('Combining/Splitting')
+    col2.code('''
+    np.concatenate((arr1,arr2),axis=0)
+    # Adds arr2 as rows to the end of arr1
+    np.concatenate((arr1,arr2),axis=1)
+    # Adds arr2 as columns to the end of arr1
+    np.split(arr,3)
+    # Split arr into 3 sub-arrays
+    np.hsplit(arr,5)
+    # Split arr horizontally on the 5th index
+    ''')
+
+    #
 
 
 
