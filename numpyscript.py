@@ -151,6 +151,7 @@ def cs_body():
 
     # Scalar Math
     st.text('')
+    col3.subheader(' ')
     col3.subheader('Scalar Math')
     col3.subheader(' ')
     col3.code('''
