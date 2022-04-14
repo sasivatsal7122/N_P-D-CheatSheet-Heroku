@@ -19,6 +19,7 @@ def cs_body():
         index=[1,2,3],
         columns=['a','b','c'])
     col1, col2, col3 = st.columns(3)
+    col11,col12=st.columns(2)
     st.text('')
     col1.subheader('Creating DataFrames')
     col1.code('''
@@ -40,8 +41,9 @@ def cs_body():
 
     ''')
     st.text('Output')
-    col1.code(st.write(df),st.write(df1)
-    )
+    col1.col11.st.dataframe(df)
+    col1.col12.st.dataframe(df1)
+    
 
 
 
