@@ -23,14 +23,14 @@ def cs_body():
     col1.subheader('Creating DataFrames')
     col1.code('''
 # Spesify values for each column
-df=pd.DataFrame({
+>>> df=pd.DataFrame({
 "a" : [4,5,6],
 "b": [7,8,9],
 "c": [10,11,12]},
 index=[1,2,3])
 
 # Specify values for each row
-df1=pd.DataFrame([
+>>> df1=pd.DataFrame([
     [4,7,10],
     [5,8,11],
     [6,9,12]],
