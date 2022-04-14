@@ -13,9 +13,9 @@ def cs_body():
         "c": [10,11,12]},
         index=[1,2,3])
     df1=pd.DataFrame([
-         [4,5,6],
-         [7,8,9],
-         [10,11,12]],
+         [4,7,10],
+         [5,8,11],
+         [6,9,12]],
         index=[1,2,3],
         columns=['a','b','c'])
     col1, col2, col3 = st.columns(3)
