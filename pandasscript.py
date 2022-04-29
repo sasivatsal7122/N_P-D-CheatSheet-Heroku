@@ -58,6 +58,62 @@ columns=['a','b','c'])
     
     col1.dataframe(df)
     col1.dataframe(df1)
+
+    col1.subheader('Method Chaining')
+    df = (pd.melt(df)
+        .rename(columns={
+        'variable':'var',
+        'value':'val'})
+        .query('val >= 200')
+        )
+
+    col1.code('''
+ #Most pandas methods return a DataFrame so that
+ #another pandas method can be applied to the result.
+ #This improves readability of code.
+ df = (pd.melt(df)
+ .rename(columns={
+ 'variable':'var',
+ 'value':'val'})
+ .query('val >= 200')
+ )
+    ''')
+    col1.text('Output : ')    
+    col1.dataframe(df)
+
+    col2.subheader('Reshaping Data')
+    col2.text('– Change layout, sorting, reindexing, renaming')
+    df=pd.DataFrame({
+        "a" : [4,5,6],
+        "b": [7,8,9],
+        "c": [10,11,12]},
+        index=[1,2,3])
+    pd.melt(df)
+
+    col2.code('''
+ pd.melt(df)
+ #Gather columns into rows.
+ df.pivot(columns='var', values='val')
+ # Spread rows into columns.
+ pd.concat([df1,df2])
+ #Append rows of DataFrames
+ pd.concat([df1,df2], axis=1)
+ #Append columns of DataFrames
+ df.sort_values('mpg')
+ #Order rows by values of a column (low to high).
+ df.sort_values('mpg’, ascending=False)
+ #Order rows by values of a column (high to low).
+ df.rename(columns = {'y':'year'})
+ #Rename the columns of a DataFrame
+ df.sort_index()
+ #Sort the index of a DataFrame
+ df.reset_index()
+ #Reset index of DataFrame to row numbers, moving
+ #index to columns.
+ df.drop(columns=['Length’, 'Height'])
+ #Drop columns from DataFrame
+    ''')
+
     
 
 
