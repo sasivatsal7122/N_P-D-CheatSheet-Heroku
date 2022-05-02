@@ -82,13 +82,14 @@ columns=['a','b','c'])
     col1.dataframe(df)
 
     col2.subheader('Reshaping Data')
-    col2.text('– Change layout, sorting, reindexing, renaming')
+    col2.text('- Change layout, sorting, reindexing, renaming')
     df=pd.DataFrame({
         "a" : [4,5,6],
         "b": [7,8,9],
         "c": [10,11,12]},
         index=[1,2,3])
-    pd.melt(df)
+    
+    
 
     col2.code('''
  pd.melt(df)
@@ -101,7 +102,7 @@ columns=['a','b','c'])
  #Append columns of DataFrames
  df.sort_values('mpg')
  #Order rows by values of a column (low to high).
- df.sort_values('mpg’, ascending=False)
+ df.sort_values('mpg', ascending=False)
  #Order rows by values of a column (high to low).
  df.rename(columns = {'y':'year'})
  #Rename the columns of a DataFrame
@@ -110,7 +111,7 @@ columns=['a','b','c'])
  df.reset_index()
  #Reset index of DataFrame to row numbers, moving
  #index to columns.
- df.drop(columns=['Length’, 'Height'])
+ df.drop(columns=['Length', 'Height'])
  #Drop columns from DataFrame
     ''')
 
