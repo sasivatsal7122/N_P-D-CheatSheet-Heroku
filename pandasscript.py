@@ -80,6 +80,26 @@ columns=['a','b','c'])
     ''')
     col1.text('Output : ')    
     col1.dataframe(df)
+    
+    col1.subheader('Using Query')
+    col1.code('''
+ #query() allows Boolean 
+ #expressions for filtering rows.
+ df.query('Length > 7')
+ df.query('Length > 7 and Width < 8')
+ df.query('Name.str.startswith("abc")',engine="python")
+    ''')
+
+    col1.subheader('Subset Variables')
+    col1.text('-Columns')
+    col1.code('''
+ df[['width', 'length', 'species']]
+ #Select multiple columns with specific names.
+ df['width'] or df.width
+ #Select single column with specific name.
+ df.filter(regex='regex')
+ #Select columns whose name matches regular expression regex.
+    ''')
 
     col2.subheader('Reshaping Data')
     col2.text('- Change layout, sorting, reindexing, renaming')
@@ -135,25 +155,35 @@ columns=['a','b','c'])
  df.tail(n)
  #Select last n rows.
     ''')
-    col2.subheader('Subset Variables')
-    col2.text('-Columns')
+
+    col2.subheader('Subsets')
+    col2.text('- Rows and Columns')
     col2.code('''
- df[['width', 'length', 'species']]
- #Select multiple columns with specific names.
- df['width'] or df.width
- #Select single column with specific name.
- df.filter(regex='regex')
- #Select columns whose name matches regular expression regex.
-    ''')
-    col2.subheader('Using Query')
-    col2.code('''
- #query() allows Boolean 
- #expressions for filtering rows.
- df.query('Length > 7')
- df.query('Length > 7 and Width < 8')
- df.query('Name.str.startswith("abc")',engine="python")
+ #Use df.loc[] and df.iloc[] to select only 
+ #rows, only columns or both.
+
+ #Use df.at[] and df.iat[] to access a single
+ #value by row and column.
+ #First index selects rows, second index columns.
+ df.iloc[10:20]
+ #Select rows 10-20.
+ df.iloc[:, [1, 2, 5]]
+ #Select columns in positions 1, 2 and 5 (first column is 0).
+ df.loc[:, 'x2':'x4']
+ #Select all columns between x2 and x4 (inclusive).
+ df.loc[df['a'] > 10, ['a', 'c']]
+ #Select rows meeting logical condition, and only the specific columns.
+ df.iat[1,2] #Access single value by index
+ df.at[4, 'A'] #Access single value by label
     ''')
 
+    col2.subheader('Handling Missing Data')
+    col2.code('''
+ df.dropna()
+ #Drop rows with any column having NA/null data.
+ df.fillna(value)
+ #Replace all NA/null data with value.
+    ''')
 
 
 
