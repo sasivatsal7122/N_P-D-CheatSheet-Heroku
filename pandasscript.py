@@ -184,6 +184,37 @@ columns=['a','b','c'])
  df.fillna(value)
  #Replace all NA/null data with value.
     ''')
+    col3.subheader('Summarize Data')
+    col3.code('''
+ df['w'].value_counts()
+ #Count number of rows with each unique value of variable
+ len(df)
+ #Number of rows in DataFrame.
+ df.shape
+ #Tuple of no.of rows, no.of columns in DataFrame.
+ df['w'].nunique()
+ #No.of distinct values in a column.
+ df.describe()
+ #Basic descriptive and statistics for each column (or GroupBy).
+    ''')
+    col3.subheader('Summary Functions')
+    col3.code('''
+    #Pandas provides a large set of summary functions that operate on
+    #different kinds of pandas objects (DataFrame columns, Series,
+    #GroupBy, Expanding and Rolling (see below)) and produce single
+    #values for each of the groups. When applied to a DataFrame, the
+    #result is returned as a pandas Series for each column.
+    sum() - #Sum values of each object. 
+    min() - #Minimum value in each object.
+    max() - #Maximum value in each object.
+    count() - #Count non-NA/null values of each object.
+    mean() - #Mean value of each object.
+    median() - #Median value of each object.
+    var() - #Variance of each object.
+    quantile([0.25,0.75]) - #Quantiles of each object.
+    std() - #Standard deviation of each object.
+    apply(function) - #Apply function to each object.
+    ''')    
 
 
 
