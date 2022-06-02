@@ -215,6 +215,28 @@ columns=['a','b','c'])
     std() - #Standard deviation of each object.
     apply(function) - #Apply function to each object.
     ''')    
+    col3.subheader('Make New Columns')
+    col3.code('''
+    df.assign(Area=lambda df: df.Length*df.Height)
+    #Compute and append one or more new columns.
+    df['Volume'] = df.Length*df.Height*df.Depth
+    #Add single column.
+    pd.qcut(df.col, n, labels=False)
+    #Bin column into n buckets.
+
+    #Pandas provides a large set of vector functions that operate on all
+    #columns of a DataFrame or a single selected column (a pandas
+    #Series). These functions produce vectors of values for each of the
+    #columns, or a single Series for the individual Series. Examples:
+    max(axis=1)
+    #Element-wise max.
+    min(axis=1)
+    #Element-wise min.
+    clip(lower=-10,upper=10)
+    #Trim values at input thresholds
+    abs()
+    #Absolute value.
+    ''')
 
 
 
