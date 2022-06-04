@@ -101,6 +101,16 @@ columns=['a','b','c'])
  #Select columns whose name matches regular expression regex.
     ''')
 
+    col1.subheader('Windows')
+    col1.code('''
+    df.expanding()
+    #Return an Expanding object allowing summary functions to be
+    #applied cumulatively.
+    df.rolling(n)
+    #Return a Rolling object allowing summary functions to be
+    #applied to windows of length n.
+    ''')
+
     col2.subheader('Reshaping Data')
     col2.text('- Change layout, sorting, reindexing, renaming')
     df=pd.DataFrame({
@@ -184,6 +194,14 @@ columns=['a','b','c'])
  df.fillna(value)
  #Replace all NA/null data with value.
     ''')
+    col2.subheader('Plotting')
+    col2.code('''
+ df.plot.hist()
+ #Histogram for each column
+ df.plot.scatter(x='w',y='h')
+ #Scatter chart using pairs of points.
+    ''')
+    
     col3.subheader('Summarize Data')
     col3.code('''
  df['w'].value_counts()
@@ -238,6 +256,40 @@ columns=['a','b','c'])
     #Absolute value.
     ''')
 
+    col3.subheader('Group Data')
+    col3.code('''
+    df.groupby(by="col")
+    #Return a GroupBy object, grouped
+    #by values in column named "col".
+    df.groupby(level="ind")
+    #Return a GroupBy object, grouped
+    #by values in index level named
+    #"ind".
+
+    #The examples below can also be applied to groups. In this case, the
+    #function is applied on a per-group basis, and the returned vectors
+    #are of the length of the original DataFrame.
+    shift(1)
+    #Copy with values shifted by 1.
+    shift(-1)
+    #Copy with values lagged by 1.
+    rank(method='dense')
+    #Ranks with no gaps.
+    rank(method='min')
+    #Ranks. Ties get min rank.
+    rank(pct=True)
+    #Ranks rescaled to interval [0, 1].
+    rank(method='first')
+    #Ranks. Ties go to first value.
+    cumsum()
+    #Cumulative sum.
+    cummax()
+    #Cumulative max.
+    cummin()
+    #Cumulative min.
+    cumprod()
+    #Cumulative product.
+    ''')
 
 
 
