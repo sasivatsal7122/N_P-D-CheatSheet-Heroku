@@ -5,15 +5,16 @@ import numpy as np
 import numpyscript
 import pandasscript
 import streamlitscript
+import gitscript
 
 st.set_page_config(
-     page_title='Streamlit cheat sheet',
+     page_title='Open cheat sheets',
      layout="wide",
      initial_sidebar_state="expanded",
 )
 def main():
-    st.title("Welcome to NumPy Pandas and Streamlit CheatSheet")
-    option = st.sidebar.radio("Select one of the Options:",('NumPy','Pandas','Streamlit'))
+    st.title("Welcome to Open CheatSheets")
+    option = st.sidebar.radio("Select one of the Options:",('NumPy','Pandas','Streamlit','Git'))
     st.text("")
     st.text("")
     st.sidebar.text(" Basic Install Commands")
@@ -35,8 +36,12 @@ def main():
         elif(option=='Pandas'):
             pass
             pandasscript.main()
+        elif(option=='Streamlit'):
+            pass
+            streamlitscript.main()
         else:
             pass
-            streamlitscript.main()           
+            gitscript.main()
+
 if __name__=='__main__':
     main()
