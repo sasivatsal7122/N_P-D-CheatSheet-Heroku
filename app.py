@@ -31,16 +31,12 @@ def main():
                     """)
     if option:
         if option == 'NumPy':
-            pass
             numpyscript.main()
         elif(option=='Pandas'):
-            pass
             pandasscript.main()
         elif(option=='Streamlit'):
-            pass
             streamlitscript.main()
-        else:
-            pass
+        elif(option=='Git'):
             gitscript.main()
 
 if __name__=='__main__':
