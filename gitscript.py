@@ -7,7 +7,7 @@ import streamlit as st
 
 
 def cs_body():
-    st.title("Git Cheatsheet")
+    st.title("Git Cheatsheet:")
     st.markdown("<p><TT>Designed and Developed by <a style='text-decoration:none;color:red' target='_blank' href='https://github.com/sasivatsal7122'>B.Sasi Vatsal</a> & <a style='text-decoration:none;color:red' target='_blank' href='https://github.com/SaiMowli'>D.Sai Mowli</a></TT></p>", unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     col1.subheader('Setup')

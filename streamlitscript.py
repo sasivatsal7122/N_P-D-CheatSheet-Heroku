@@ -1,5 +1,8 @@
 import streamlit as st
 def cs_body():
+
+    st.title("Streamllit Cheatsheet")
+    st.markdown("<p><TT>Designed and Developed by <a style='text-decoration:none;color:red' target='_blank' href='https://github.com/Riteshj2002'>J.Ritesh</a> </TT></p>", unsafe_allow_html=True)
     # Magic commands
 
     col1, col2, col3 = st.columns(3)
