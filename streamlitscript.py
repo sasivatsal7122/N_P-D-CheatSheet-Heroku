@@ -1,7 +1,7 @@
 import streamlit as st
 def cs_body():
 
-    st.title("Streamllit Cheatsheet")
+    st.title("Streamllit Cheatsheet: ")
     st.markdown("<p><TT>Designed and Developed by <a style='text-decoration:none;color:red' target='_blank' href='https://github.com/Riteshj2002'>J.Ritesh</a> </TT></p>", unsafe_allow_html=True)
     # Magic commands
 
@@ -260,6 +260,5 @@ st.experimental_set_query_params(**params)
 # Run main()
 
 def main():
-    st.title("Streamlit cheatsheet: ")
     st.header('')
     cs_body()

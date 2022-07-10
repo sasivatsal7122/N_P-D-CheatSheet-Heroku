@@ -7,7 +7,7 @@ import numpy as np
 
 def cs_body():
 
-    st.title("Pandas Cheatsheet")
+    st.title("Pandas Cheatsheet: ")
     st.markdown("<p><TT>Designed and Developed by <a style='text-decoration:none;color:red' target='_blank' href='https://github.com/sasivatsal7122'>B.Sasi Vatsal</a> & <a style='text-decoration:none;color:red' target='_blank' href='https://github.com/SaiMowli'>D.Sai Mowli</a></TT></p>", unsafe_allow_html=True)
     # Import/Export
     df=pd.DataFrame({
@@ -300,6 +300,5 @@ cumprod()
 
 
 def main():
-    st.title("Pandas Cheat sheet : ")
     st.header('')
     cs_body()
