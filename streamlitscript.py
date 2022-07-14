@@ -1,7 +1,7 @@
 import streamlit as st
 def cs_body():
 
-    st.title("Streamllit Cheatsheet: ")
+    st.title("Streamlit Cheatsheet: ")
     st.markdown("<p><TT>Designed and Developed by <a style='text-decoration:none;color:red' target='_blank' href='https://github.com/Riteshj2002'>J.Ritesh</a> </TT></p>", unsafe_allow_html=True)
     # Magic commands
 
@@ -247,13 +247,6 @@ st.experimental_set_query_params(**params)
 >>> st.experimental_singleton.clear()
     ''')
 
-    col3.subheader('Other key parts of the API')
-    col3.markdown('''
-<small>[State API](https://docs.streamlit.io/en/stable/session_state_api.html)</small><br>
-<small>[Theme option reference](https://docs.streamlit.io/en/stable/theme_options.html)</small><br>
-<small>[Components API reference](https://docs.streamlit.io/en/stable/develop_streamlit_components.html)</small><br>
-<small>[API cheat sheet](https://share.streamlit.io/daniellewisdl/streamlit-cheat-sheet/app.py)</small><br>
-''', unsafe_allow_html=True)
 
     return None
 
